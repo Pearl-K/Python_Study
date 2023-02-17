@@ -1,5 +1,4 @@
 import sys
-import time
 N, M = map(int, sys.stdin.readline().split())
 cards = []
 mins =[]
