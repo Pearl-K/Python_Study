@@ -1,0 +1,22 @@
+M = int(input())
+mlist = list(map(int, input().split()))
+
+def BinarySearch(arr, target):
+    mid = len(arr)//2
+    start, end = 0, len(arr) - 1
+
+    while start <= end: #이진탐색이 돌아가는 조건
+        mid = (start + end) // 2
+        
+        if target == arr[mid]:
+            return mid
+        elif target > arr[mid]:
+            start = mid + 1
+        else: #targe < arr[mid] 일 때
+            end = mid - 1
+    
+for i in range(M):
+    if BinarySearch (nlist, mlist[i]): #이진 탐색 값의 리턴 값이 존재할 때
+        print('yes', end=' ')
+    else:
+        print('no', end=' ')
